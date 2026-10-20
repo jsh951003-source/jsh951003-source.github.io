@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi Touch — Tactile Sensing for Robotic Hands</title>
+<meta name="description" content="Hi Touch develops high-resolution tactile sensors that give robotic hands a human sense of touch.">
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #2d333b;
+    --text: #e6edf3;
+    --muted: #9aa4b2;
+    --accent: #4ade80;
+    --accent-dim: #22c55e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0;
+    background: rgba(13,17,23,.92);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+  }
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .logo { font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; }
+  .logo span { color: var(--accent); }
+  nav ul { display: flex; gap: 28px; list-style: none; }
+  nav a { color: var(--muted); text-decoration: none; font-size: .95rem; }
+  nav a:hover { color: var(--text); }
+
+  .hero { padding: 110px 0 90px; text-align: center; }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800; letter-spacing: -.03em; line-height: 1.15;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p {
+    margin: 24px auto 0; max-width: 560px;
+    color: var(--muted); font-size: 1.15rem;
+  }
+  .cta {
+    display: inline-block; margin-top: 36px;
+    background: var(--accent-dim); color: #06130a;
+    font-weight: 700; text-decoration: none;
+    padding: 13px 30px; border-radius: 8px;
+  }
+  .cta:hover { background: var(--accent); }
+
+  section { padding: 72px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 1.7rem; letter-spacing: -.02em; margin-bottom: 14px; }
+  .section-lead { color: var(--muted); max-width: 640px; margin-bottom: 40px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 26px;
+  }
+  .card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+  .card h3::before { content: "— "; color: var(--accent); }
+  .card p { color: var(--muted); font-size: .95rem; }
+
+  .about p { color: var(--muted); max-width: 720px; }
+  .about p + p { margin-top: 14px; }
+
+  .contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 32px;
+    max-width: 480px;
+  }
+  .contact-box dt { color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; margin-top: 18px; }
+  .contact-box dt:first-child { margin-top: 0; }
+  .contact-box dd { font-size: 1.05rem; }
+  .contact-box a { color: var(--accent); text-decoration: none; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 0; color: var(--muted); font-size: .85rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Hi <span>Touch</span></div>
+      <ul>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero container">
+    <h1>Giving robotic hands<br>a <em>human sense of touch</em></h1>
+    <p>Hi Touch develops high-resolution tactile sensors that enable robotic hands to grasp, manipulate, and feel the world the way humans do.</p>
+    <a class="cta" href="#contact">Get in touch</a>
+  </div>
+
+  <section id="technology">
+    <div class="container">
+      <h2>Technology</h2>
+      <p class="section-lead">Dexterous manipulation is the last unsolved frontier in robotics — and it cannot be solved with vision alone. Our tactile sensing technology closes that gap.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>High-Resolution Tactile Sensing</h3>
+          <p>Multi-channel tactile sensor arrays that capture contact pressure distribution in real time, designed for integration into robotic fingertips and grippers.</p>
+        </div>
+        <div class="card">
+          <h3>Robot Hand Integration</h3>
+          <p>Sensor modules engineered for real robotic hands — compact, robust, and built to survive repeated contact in real-world manipulation tasks.</p>
+        </div>
+        <div class="card">
+          <h3>Touch-Driven Intelligence</h3>
+          <p>Tactile data pipelines for machine learning, enabling slip detection, force control, and contact-rich manipulation policies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Hi Touch</h2>
+      <p>Hi Touch Inc. is a robotics startup building tactile sensing solutions for next-generation robotic hands. Founded by researchers in tactile sensing and robotic manipulation, we build on years of research experience to bring human-level touch to real-world robots.</p>
+      <p>Our mission is simple: robots that can truly feel can truly help.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="section-lead">Interested in our technology, partnership, or investment? We'd love to hear from you.</p>
+      <div class="contact-box">
+        <dl>
+          <dt>Company</dt>
+          <dd>Hi Touch Inc. (주식회사 하이터치)</dd>
+          <dt>CEO</dt>
+          <dd>Seung Hwan Jeon</dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:shjeon@hitouch.ai.kr">shjeon@hitouch.ai.kr</a></dd>
+          <dt>Location</dt>
+          <dd>South Korea</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Hi Touch Inc. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
